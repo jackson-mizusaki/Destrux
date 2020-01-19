@@ -1,0 +1,5 @@
+
+*.ipch
+*.db
+.vs/Destrux/v16/.suo
+*.opendb
