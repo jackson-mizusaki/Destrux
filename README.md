@@ -19,7 +19,7 @@ The position of that particle at the current time t can be expressed as the poin
 description, i.e., its displacement.
 
 The equivalent function that does not change between spatial and material descriptions is simply the displacement function, denoted by u:
-\mathbf{x_{t}} = u(\mathbf{x},t)
+![\mathbf{x_{t}} = u(\mathbf{x},t)](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7Bx_%7Bt%7D%7D%20%3D%20u(%5Cmathbf%7Bx%7D%2Ct))
 
 The relation between u and Φ is expressed
 ![u(\mathbf{x},t) = \Phi(\mathbf{X},t) - \mathbf{X_{0}}](https://render.githubusercontent.com/render/math?math=u(%5Cmathbf%7Bx%7D%2Ct)%20%3D%20%5CPhi(%5Cmathbf%7BX%7D%2Ct)%20-%20%5Cmathbf%7BX_%7B0%7D%7D)
