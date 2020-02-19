@@ -3,3 +3,5 @@
 *.db
 .vs/Destrux/v16/.suo
 *.opendb
+.vs/*
+Debug/*
