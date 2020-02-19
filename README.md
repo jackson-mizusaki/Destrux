@@ -110,10 +110,13 @@ Stress is related in terms of Force/Area. When a force is applied in the same di
 The Cauchy stress Tensor σ is a 3x3 matrix that defines the stresses of a material.
 
 [ σ_xx   σ_xy   σ_xz  ]
+
 | σ_yx   σ_yy   σ_yz  |
+
 [ σ_zx   σ_zy   σ_zz  ]
 
 This is related to the traction vector T in the following way
+
 ![T_{j}^{(n)} = \sigma_{ij}n_{i}](https://render.githubusercontent.com/render/math?math=T_%7Bj%7D%5E%7B(n)%7D%20%3D%20%5Csigma_%7Bij%7Dn_%7Bi%7D)
 
 The Cauchy stress tensor is evaluated at a single spatial point, and so the traction vector gives the stresses encountered at the point 
