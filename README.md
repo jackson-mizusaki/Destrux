@@ -5,12 +5,12 @@ A library for realtime deformation and brittle fracture
 ## Material Description
 Material descriptions follow a particle within the body through space over time.
 Changes to a body during deformation can be expressed as a change from the body's initial state.
-Material coordinates are expressed by an uppercase X and are in relation to Cartesian bases E1, E2, and E3.
+Material coordinates are expressed by an uppercase **X** and are in relation to Cartesian bases ![\mathbf{E_{1}}, \mathbf{E_{2}}, \mathbf{E_{3}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BE_%7B1%7D%7D%2C%20%5Cmathbf%7BE_%7B2%7D%7D%2C%20%5Cmathbf%7BE_%7B3%7D%7D)
 
 ## Spatial Description
 Spatial descriptions examine a fixed point in space and describe which particles of a body are at that point over time.
 
-Spatial coordinates are expressed by a lowercase x and are in relation to Cartesian bases **e1**, **e2**, and **e3**. 
+Spatial coordinates are expressed by a lowercase x and are in relation to Cartesian bases ![\mathbf{e_{1}}, \mathbf{e_{2}}, \mathbf{e_{3}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7Be_%7B1%7D%7D%2C%20%5Cmathbf%7Be_%7B2%7D%7D%2C%20%5Cmathbf%7Be_%7B3%7D%7D) 
 
 Consider a body with a particle at point **X** at time ![t_{0} = 0](https://render.githubusercontent.com/render/math?math=t_%7B0%7D%20%3D%200)
 
@@ -19,12 +19,12 @@ The position of that particle at the current time *t* can be expressed as the po
 
 ![\Phi](https://render.githubusercontent.com/render/math?math=%5CPhi) is a map between the coordinate of the particle in the initial material description to the coordinate in the current spatial description, i.e., its displacement.
 
-The equivalent function that does not change between spatial and material descriptions is simply the displacement function, denoted by *u*:
+The equivalent function that does not change between spatial and material descriptions is simply the displacement function, denoted by **u*:*
 
 ![\mathbf{x_{t}} = u(\mathbf{x},t)](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7Bx_%7Bt%7D%7D%20%3D%20u(%5Cmathbf%7Bx%7D%2Ct))
 
 
-The relation between *u* and *Φ* is expressed by
+The relation between **u** and **Φ** is expressed by
 
 ![u(\mathbf{x},t) = \Phi(\mathbf{X},t) - \mathbf{X_{0}}](https://render.githubusercontent.com/render/math?math=u(%5Cmathbf%7Bx%7D%2Ct)%20%3D%20%5CPhi(%5Cmathbf%7BX%7D%2Ct)%20-%20%5Cmathbf%7BX_%7B0%7D%7D)
 
