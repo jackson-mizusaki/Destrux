@@ -28,13 +28,13 @@ The relation between **u** and **Φ** is expressed by
 
 ![u(\mathbf{x},t) = \Phi(\mathbf{X},t) - \mathbf{X_{0}}](https://render.githubusercontent.com/render/math?math=u(%5Cmathbf%7Bx%7D%2Ct)%20%3D%20%5CPhi(%5Cmathbf%7BX%7D%2Ct)%20-%20%5Cmathbf%7BX_%7B0%7D%7D)
 
-One can translate between spatial and material coordinates by "push-forward" and "pull-back" operations. In general linear algebra, such operators are defined by the functions phi for push-forward, and phi* for pull-back. In this context, the push-forward and pull-back operators are defined by the Deformation Gradient Tensor ![\mathbf{F}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BF%7D) (in different ways, for different operands)
+One can translate between spatial and material coordinates by "push-forward" and "pull-back" operations. In general linear algebra, such operators are defined (perhaps confusingly) by the functions Φ for push-forward, and Φ* for pull-back. In this context, the push-forward and pull-back operators are defined by the Deformation Gradient Tensor ![\mathbf{F}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BF%7D) (in different ways, for different operands)
 
 
 ## Deformation Gradient Tensor F
-The motivation for using the deformation gradient tensor lies in needing to express the changes in particles after deformation by their positions from the reference configuration. Hence, F will relate in some way to the changes of a particle in a spatial description and the change of a particle in a material description. The displacement function Φ defined above already expresses the relation between the two descriptions. 
+The motivation for using the deformation gradient tensor lies in needing to express the changes in particles after deformation by their positions from the reference configuration. Hence, **F** will relate in some way to the changes of a particle in a spatial description and the change of a particle in a material description. The displacement function **Φ** defined above already expresses the relation between the two descriptions. 
 
-**F** is then the gradient of Φ
+**F** is then the gradient of **Φ**
 
 Remember that each point in space is expressed by a 3-tuple. **X** and **x** are actually (X, Y, Z) and (x, y, z). 
 The gradient tensor is a 3x3 matrix that looks like the following
