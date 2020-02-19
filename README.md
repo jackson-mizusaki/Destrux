@@ -9,37 +9,49 @@ Material coordinates are expressed by an uppercase X and are in relation to Cart
 
 ## Spatial Description
 Spatial descriptions examine a fixed point in space and describe which particles of a body are at that point over time.
-Spatial coordinates are expressed by a lowercase x and are in relation to Cartesian bases e1, e2, and e3. 
 
-Consider a body with a particle at point X at time t0=0
-The position of that particle at the current time t can be expressed as the point x, where 
+Spatial coordinates are expressed by a lowercase x and are in relation to Cartesian bases **e1**, **e2**, and **e3**. 
+
+Consider a body with a particle at point **X** at time ![t_{0} = 0](https://render.githubusercontent.com/render/math?math=t_%7B0%7D%20%3D%200)
+
+The position of that particle at the current time *t* can be expressed as the point **x**, where 
 ![\mathbf{x} = \Phi(\mathbf{X}, t)](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7Bx%7D%20%3D%20%5CPhi(%5Cmathbf%7BX%7D%2C%20t))
 
-![\Phi](https://render.githubusercontent.com/render/math?math=%5CPhi) is a map between the coordinate of the particle in the initial material description to the coordinate in the current spatial 
-description, i.e., its displacement.
+![\Phi](https://render.githubusercontent.com/render/math?math=%5CPhi) is a map between the coordinate of the particle in the initial material description to the coordinate in the current spatial description, i.e., its displacement.
 
-The equivalent function that does not change between spatial and material descriptions is simply the displacement function, denoted by u:
+The equivalent function that does not change between spatial and material descriptions is simply the displacement function, denoted by *u*:
+
 ![\mathbf{x_{t}} = u(\mathbf{x},t)](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7Bx_%7Bt%7D%7D%20%3D%20u(%5Cmathbf%7Bx%7D%2Ct))
 
-The relation between u and Φ is expressed
+
+The relation between *u* and *Φ* is expressed by
+
 ![u(\mathbf{x},t) = \Phi(\mathbf{X},t) - \mathbf{X_{0}}](https://render.githubusercontent.com/render/math?math=u(%5Cmathbf%7Bx%7D%2Ct)%20%3D%20%5CPhi(%5Cmathbf%7BX%7D%2Ct)%20-%20%5Cmathbf%7BX_%7B0%7D%7D)
 
 One can translate between spatial and material coordinates by "push-forward" and "pull-back" operations. In general linear algebra, such operators are defined by the functions phi for push-forward, and phi* for pull-back. In this context, the push-forward and pull-back operators are defined by the Deformation Gradient Tensor ![\mathbf{F}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BF%7D) (in different ways, for different operands)
 
+
 ## Deformation Gradient Tensor F
-The motivation for using the deformation gradient tensor lies in needing to express the changes in particles after deformation by their positions 
-from the reference configuration. Hence, F will relate in some way to the changes of a particle in a spatial description and the change of a particle
-in a material description. The displacement function Φ defined above already expresses the relation between the two descriptions. 
-F is then the gradient of Φ
-Remember that each point in space is expressed by a 3-tuple. X and x are actually (X, Y, Z) and (x, y, z). 
+The motivation for using the deformation gradient tensor lies in needing to express the changes in particles after deformation by their positions from the reference configuration. Hence, F will relate in some way to the changes of a particle in a spatial description and the change of a particle in a material description. The displacement function Φ defined above already expresses the relation between the two descriptions. 
+
+**F** is then the gradient of Φ
+
+Remember that each point in space is expressed by a 3-tuple. **X** and **x** are actually (X, Y, Z) and (x, y, z). 
 The gradient tensor is a 3x3 matrix that looks like the following
 
 
+
 [  ∂x/∂X  ∂x/∂Y  ∂x/∂Z  ]
+
 |  ∂y/∂X  ∂y/∂Y  ∂y/∂Z  |
+
 [  ∂z/∂X  ∂z/∂Y  ∂z/∂Z  ]
 
-Note that many texts describe the i-th element of a tuple as ![\mathbf{X_{i}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BX_%7Bi%7D%7D) or ![\mathbf{X_{i}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7Bx_%7Bi%7D%7D). For example, ∂y/∂Z would be written ∂x_2/∂X_3
+For formatting's sake, i will use [Einstein notation](https://en.wikipedia.org/wiki/Einstein_notation). Check out [https://www.continuummechanics.org/tensornotationbasic.html] for a nice introduction.
+
+![F_{ij} = \frac{\partial x_{i}}{\partial X_{j}}](https://render.githubusercontent.com/render/math?math=F_%7Bij%7D%20%3D%20%5Cfrac%7B%5Cpartial%20x_%7Bi%7D%7D%7B%5Cpartial%20X_%7Bj%7D%7D)
+
+Note that many texts describe the *i*-th element of a tuple as ![\mathbf{X_{i}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BX_%7Bi%7D%7D) or ![\mathbf{X_{i}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7Bx_%7Bi%7D%7D). For example, ∂y/∂Z would be written ∂x_2/∂X_3
 
 This tensor describes the partial derivatives of each point in the current configuration (spatial description) with respect to each the point in the reference
 configuration (material description).
