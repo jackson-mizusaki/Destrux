@@ -58,62 +58,62 @@ configuration (material description).
 
 ## Displacement Gradient 
 The displacement gradient ∇u is related to the deformation gradient tensor in that 
-∇u = F - I
-where I is the identity matrix.
-Non-rigorously, ∇u = ∇(Φ-X) = ∇(Φ)-∇(X) = F - I
+∇u = **F** - **I** 
+
+where **I** is the identity matrix.
+Non-rigorously, ![\nabla\cdot\mathbf{u} = \nabla(\Phi-\mathbf{X}) = \nabla(\Phi)-\nabla(\mathbf{X}) = \mathbf{F}-\mathbf{I}](https://render.githubusercontent.com/render/math?math=%5Cnabla%5Ccdot%5Cmathbf%7Bu%7D%20%3D%20%5Cnabla(%5CPhi-%5Cmathbf%7BX%7D)%20%3D%20%5Cnabla(%5CPhi)-%5Cnabla(%5Cmathbf%7BX%7D)%20%3D%20%5Cmathbf%7BF%7D-%5Cmathbf%7BI%7D)
 
 ## Right Cauchy-Green Deformation Tensor **C**
-The right Cauchy-Green Deformation Tensor, henceforth the Cauchy-Green tensor, or just C when the context obvious, is a tensor obtained by multiplying the transpose of **F** by **F**
+The right Cauchy-Green Deformation Tensor, henceforth the Cauchy-Green tensor, or just **C** when the context obvious, is a tensor obtained by multiplying the transpose of **F** by **F**
 
 ![\mathbf{C} = \mathbf{F^{T}F}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BC%7D%20%3D%20%5Cmathbf%7BF%5E%7BT%7DF%7D)
 
-It is a symmetrix matrix that looks like the following:
+It is a symmetrix 3x3 matrix that looks like the following:
 
-[  ∂x/∂X*∂x/∂X  ∂x/∂Y*∂y/∂X  ∂x/∂Z*∂z/∂X  ]
-|  ∂y/∂X*∂x/∂Y  ∂y/∂Y*∂y/∂Y  ∂y/∂Z*∂z/∂Y  |
-[  ∂z/∂X*∂x/∂Z  ∂z/∂Y*∂y/∂Z  ∂z/∂Z*∂z/∂Z  ]
+![C_{ij} = \frac{\partial x_{i}}{\partial X_{j}} \frac{\partial x_{j}}{\partial X_{i}}](https://render.githubusercontent.com/render/math?math=C_%7Bij%7D%20%3D%20%5Cfrac%7B%5Cpartial%20x_%7Bi%7D%7D%7B%5Cpartial%20X_%7Bj%7D%7D%20%5Cfrac%7B%5Cpartial%20x_%7Bj%7D%7D%7B%5Cpartial%20X_%7Bi%7D%7D)
 
-There is a spatial description version of this tensor, known as the left Cauchy-Green tensor, or the Piola tensor, or the Finger tensor, normally represented by B or b as
+There is a spatial description version of this tensor, known as the left Cauchy-Green tensor, or the Piola tensor, or the Finger tensor, normally represented by **B** or **b** as
 
 ![\mathbf{B} = \mathbf{FF^{T}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BB%7D%20%3D%20%5Cmathbf%7BFF%5E%7BT%7D%7D)
 
 # Strain
-Because a body can have a rigid body displacement, i.e, every point in the body moves uniformly through space and does not change in reference to each other, 
-the measure of deformation, strain, is a measure of how the displacement is locally different to its initial configuration. More physically, strain is a 
-measure of a body's stretch or compression, as well as any angular stretching, or shearing.
-
+Because a body can have a rigid body displacement, i.e, every point in the body moves uniformly through space and does not change in reference to each other, the measure of deformation, strain, is a measure of how the displacement is locally different to its initial configuration. More physically, strain is a measure of a body's stretch or compression, as well as any angular stretching, or shearing.
 
 
 ## Green-Lagrange Strain Tensor E
-The Green-Lagrange Strain Tensor E is defined as 
+The Green-Lagrange Strain Tensor **E** is defined as 
+
 ![\mathbf{E} = \frac{1}{2}(\mathbf{C} - \mathbf{I})](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BE%7D%20%3D%20%5Cfrac%7B1%7D%7B2%7D(%5Cmathbf%7BC%7D%20-%20%5Cmathbf%7BI%7D))
 
 where **C** is the Cauchy-Green tensor, and **I** is the Identity tensor
 
-The spatial version, the Eulerian/Almansi strain tensor is represented by e and is defined by
+The spatial version, the Eulerian/Almansi strain tensor is represented by **e** and is defined by
 ![\mathbf{e} = \frac{1}{2}(\mathbf{I} - \mathbf{B^{-1}}) ](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7Be%7D%20%3D%20%5Cfrac%7B1%7D%7B2%7D(%5Cmathbf%7BI%7D%20-%20%5Cmathbf%7BB%5E%7B-1%7D%7D)%20)
 
 ## Some More Pull-back operators
 The left and right Cauchy-Green tensors are related by
-![\mathbf{b} = \mathbf{FCF^{-1}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7Bb%7D%20%3D%20%5Cmathbf%7BFCF%5E%7B-1%7D%7D)    and
-\mathbf{C} = \mathbf{F^{-1}bF}
+
+![\mathbf{b} = \mathbf{FCF^{-1}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7Bb%7D%20%3D%20%5Cmathbf%7BFCF%5E%7B-1%7D%7D) and
+
+![\mathbf{C} = \mathbf{F^{-1}bF}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BC%7D%20%3D%20%5Cmathbf%7BF%5E%7B-1%7DbF%7D)
 
 The Green-lagrange Strain and Eulerian/Almansi Strain tensors are related by
-![\mathbf{e} = \mathbf{F^{-T}EF^{-1}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7Be%7D%20%3D%20%5Cmathbf%7BF%5E%7B-T%7DEF%5E%7B-1%7D%7D)     and
+
+![\mathbf{e} = \mathbf{F^{-T}EF^{-1}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7Be%7D%20%3D%20%5Cmathbf%7BF%5E%7B-T%7DEF%5E%7B-1%7D%7D) and
+
 ![\mathbf{E} = \mathbf{F^{T}eF}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BE%7D%20%3D%20%5Cmathbf%7BF%5E%7BT%7DeF%7D)
 
 # Stress
-Stress is related in terms of Force/Area. When a force is applied in the same direction as the normal of the area, it is considered a normal stress, and
-represented by σ. When the force is orthogonal to the normal of the area, it is a shear stress, represented by τ
+Stress is related in terms of Force/Area. When a force is applied in the same direction as the normal of the area, it is considered a normal stress, and represented by σ. When the force is orthogonal to the normal of the area, it is a shear stress, represented by τ
 
 ## Cauchy Stress Tensor σ
 The Cauchy stress Tensor σ is a 3x3 matrix that defines the stresses of a material.
 
-     [ σ_xx   σ_xy   σ_xz  ]
-σ =  | σ_yx   σ_yy   σ_yz  |
-     [ σ_zx   σ_zy   σ_zz  ]
+[ σ_xx   σ_xy   σ_xz  ]
+| σ_yx   σ_yy   σ_yz  |
+[ σ_zx   σ_zy   σ_zz  ]
 
 This is related to the traction vector T in the following way
-T(n) =  n . σ
+![T_{j}^{(n)} = \sigma_{ij}n_{i}](https://render.githubusercontent.com/render/math?math=T_%7Bj%7D%5E%7B(n)%7D%20%3D%20%5Csigma_%7Bij%7Dn_%7Bi%7D)
 
 The Cauchy stress tensor is evaluated at a single spatial point, and so the traction vector gives the stresses encountered at the point 
