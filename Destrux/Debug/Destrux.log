@@ -1,11 +1,2 @@
-﻿  Attribute.cpp
-  Mesh.cpp
-C:\Users\Jackson\source\repos\Destrux\Destrux\Mesh.h(6,7): error C2371: 'Mesh': redefinition; different basic types
-C:\Users\Jackson\source\repos\Destrux\Destrux\Globals.h(19): message : see declaration of 'Mesh'
-  Model.cpp
-C:\Users\Jackson\source\repos\Destrux\Destrux\Mesh.h(6,7): error C2371: 'Mesh': redefinition; different basic types
-C:\Users\Jackson\source\repos\Destrux\Destrux\Globals.h(19): message : see declaration of 'Mesh'
-  Tetrahedralize.cpp
-  Vertex.cpp
-  VolumetricMesh.cpp
-  Generating Code...
+﻿  Destrux.cpp
+  Destrux.vcxproj -> C:\Users\Jackson\source\repos\Destrux\Debug\Destrux.lib

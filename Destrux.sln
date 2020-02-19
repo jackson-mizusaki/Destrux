@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29609.76
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Destrux", "Destrux\Destrux.vcxproj", "{97121817-0A3A-48F9-BF74-FC8A1EBAF7B9}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DestruxApp", "Destrux\Destrux.vcxproj", "{97121817-0A3A-48F9-BF74-FC8A1EBAF7B9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "DestruxTest", "DestruxTest\DestruxTest.vcxproj", "{B5B9567E-93CC-42F9-8DF0-0C91664A808F}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Destrux", "DestruxApp\DestruxApp.vcxproj", "{FC74C037-D890-43E2-8ED5-885CEFCAECB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,22 @@ Global
 		{97121817-0A3A-48F9-BF74-FC8A1EBAF7B9}.Release|x64.Build.0 = Release|x64
 		{97121817-0A3A-48F9-BF74-FC8A1EBAF7B9}.Release|x86.ActiveCfg = Release|Win32
 		{97121817-0A3A-48F9-BF74-FC8A1EBAF7B9}.Release|x86.Build.0 = Release|Win32
+		{B5B9567E-93CC-42F9-8DF0-0C91664A808F}.Debug|x64.ActiveCfg = Debug|x64
+		{B5B9567E-93CC-42F9-8DF0-0C91664A808F}.Debug|x64.Build.0 = Debug|x64
+		{B5B9567E-93CC-42F9-8DF0-0C91664A808F}.Debug|x86.ActiveCfg = Debug|Win32
+		{B5B9567E-93CC-42F9-8DF0-0C91664A808F}.Debug|x86.Build.0 = Debug|Win32
+		{B5B9567E-93CC-42F9-8DF0-0C91664A808F}.Release|x64.ActiveCfg = Release|x64
+		{B5B9567E-93CC-42F9-8DF0-0C91664A808F}.Release|x64.Build.0 = Release|x64
+		{B5B9567E-93CC-42F9-8DF0-0C91664A808F}.Release|x86.ActiveCfg = Release|Win32
+		{B5B9567E-93CC-42F9-8DF0-0C91664A808F}.Release|x86.Build.0 = Release|Win32
+		{FC74C037-D890-43E2-8ED5-885CEFCAECB4}.Debug|x64.ActiveCfg = Debug|x64
+		{FC74C037-D890-43E2-8ED5-885CEFCAECB4}.Debug|x64.Build.0 = Debug|x64
+		{FC74C037-D890-43E2-8ED5-885CEFCAECB4}.Debug|x86.ActiveCfg = Debug|Win32
+		{FC74C037-D890-43E2-8ED5-885CEFCAECB4}.Debug|x86.Build.0 = Debug|Win32
+		{FC74C037-D890-43E2-8ED5-885CEFCAECB4}.Release|x64.ActiveCfg = Release|x64
+		{FC74C037-D890-43E2-8ED5-885CEFCAECB4}.Release|x64.Build.0 = Release|x64
+		{FC74C037-D890-43E2-8ED5-885CEFCAECB4}.Release|x86.ActiveCfg = Release|Win32
+		{FC74C037-D890-43E2-8ED5-885CEFCAECB4}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
