@@ -3,6 +3,9 @@ This file acts as a reference and introduction to many of the concepts used with
 
 **Disclaimer: I do not have a formal education in continuum mechanics. The notes contained herein are my own, as i learn the principles of continuum mechanics and the finitie element method, and do not constitute a full course in such disciplines. Although i am using multiple sources to confirm my understanding of each concept, do not assume correctness of anything presented.**
 
+Other sources for information on this subject can be found on [Wikipedia](https://en.wikipedia.org/wiki/Continuum_mechanics) and [continuummechanics.org/](https://www.continuummechanics.org/). 
+
+
 # Descriptions and Coordinates
 ## Material Description
 Material descriptions follow a particle within the body through space over time.
@@ -51,13 +54,36 @@ The gradient tensor is a 3x3 matrix that looks like the following
 
 [  ∂z/∂X  ∂z/∂Y  ∂z/∂Z  ]
 
-For formatting's sake, i will use [Einstein notation](https://en.wikipedia.org/wiki/Einstein_notation). Check out [https://www.continuummechanics.org/tensornotationbasic.html] for a nice introduction.
+For formatting's sake, i will use [Einstein notation](https://en.wikipedia.org/wiki/Einstein_notation). Check out (this page)[https://www.continuummechanics.org/tensornotationbasic.html] for a nice introduction.
 
 ![F_{ij} = \dfrac{\partial x_{i}}{\partial X_{j}}](https://render.githubusercontent.com/render/math?math=F_%7Bij%7D%20%3D%20%5Cdfrac%7B%5Cpartial%20x_%7Bi%7D%7D%7B%5Cpartial%20X_%7Bj%7D%7D)
 
 Note that many texts describe the *i*-th element of a tuple as ![\mathbf{X_{i}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BX_%7Bi%7D%7D) or ![\mathbf{X_{i}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7Bx_%7Bi%7D%7D). For example, ∂y/∂Z would be written ∂x_2/∂X_3
 
-This tensor describes the partial derivatives of each point in the current configuration (spatial description) with respect to each the point in the referenceconfiguration (material description).
+This tensor describes the partial derivatives of each point in the current configuration (spatial description) with respect to each the point in the reference configuration (material description).
+
+## Polar Decomposition
+Sometimes a body is rotated and deformed at the same time. It can be hard to identify the stresses of the body when **F** encodes both transformations, so we separate **F** into two parts.
+
+![\mathbf{F} = \mathbf{R} \cdot \mathbf{U}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BF%7D%20%3D%20%5Cmathbf%7BR%7D%20%5Ccdot%20%5Cmathbf%7BU%7D)
+
+We say **R** is the rotation matrix and **U** is the right stretch tensor. 
+
+We could also have decomposed **F** like so
+
+![\mathbf{F} = \mathbf{V} \cdot \mathbf{R}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BF%7D%20%3D%20%5Cmathbf%7BV%7D%20%5Ccdot%20%5Cmathbf%7BR%7D)
+
+In this case, **V** is the left stretch tensor.
+
+**R** is orthogonal. Both **V** and **U** are symmetric. Notably
+![\mathbf{R^{-1}} = \mathbf{R^{T}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BR%5E%7B-1%7D%7D%20%3D%20%5Cmathbf%7BR%5E%7BT%7D%7D)
+
+![\mathbf{RU} = \mathbf{VR}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BRU%7D%20%3D%20%5Cmathbf%7BVR%7D)
+
+![\mathbf{RUR^{T}} = \mathbf{VRR^{T}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BRUR%5E%7BT%7D%7D%20%3D%20%5Cmathbf%7BVRR%5E%7BT%7D%7D)
+
+![\mathbf{RUR^{T}} = \mathbf{V}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BRUR%5E%7BT%7D%7D%20%3D%20%5Cmathbf%7BV%7D)
+
 
 ## Displacement Gradient 
 The displacement gradient ∇u is related to the deformation gradient tensor in that 
