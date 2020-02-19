@@ -2,6 +2,7 @@
 A library for realtime deformation and brittle fracture
 
 # Overview
+# Descriptions and Coordinates
 ## Material Description
 Material descriptions follow a particle within the body through space over time.
 Changes to a body during deformation can be expressed as a change from the body's initial state.
@@ -53,14 +54,15 @@ For formatting's sake, i will use [Einstein notation](https://en.wikipedia.org/w
 
 Note that many texts describe the *i*-th element of a tuple as ![\mathbf{X_{i}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BX_%7Bi%7D%7D) or ![\mathbf{X_{i}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7Bx_%7Bi%7D%7D). For example, ∂y/∂Z would be written ∂x_2/∂X_3
 
-This tensor describes the partial derivatives of each point in the current configuration (spatial description) with respect to each the point in the reference
-configuration (material description).
+This tensor describes the partial derivatives of each point in the current configuration (spatial description) with respect to each the point in the referenceconfiguration (material description).
 
 ## Displacement Gradient 
 The displacement gradient ∇u is related to the deformation gradient tensor in that 
+
 ∇u = **F** - **I** 
 
 where **I** is the identity matrix.
+
 Non-rigorously, ![\nabla\cdot\mathbf{u} = \nabla(\Phi-\mathbf{X}) = \nabla(\Phi)-\nabla(\mathbf{X}) = \mathbf{F}-\mathbf{I}](https://render.githubusercontent.com/render/math?math=%5Cnabla%5Ccdot%5Cmathbf%7Bu%7D%20%3D%20%5Cnabla(%5CPhi-%5Cmathbf%7BX%7D)%20%3D%20%5Cnabla(%5CPhi)-%5Cnabla(%5Cmathbf%7BX%7D)%20%3D%20%5Cmathbf%7BF%7D-%5Cmathbf%7BI%7D)
 
 ## Right Cauchy-Green Deformation Tensor **C**
