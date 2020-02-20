@@ -175,6 +175,7 @@
     <ClInclude Include="include\Polyhedron.h" />
     <ClInclude Include="include\Tetrahedron.h" />
     <ClInclude Include="include\TetrahedronAnalysis.h" />
+    <ClInclude Include="include\Tensor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\CauchyStressTensor.cpp" />
@@ -188,6 +189,7 @@
     <ClCompile Include="src\Polyhedron.cpp" />
     <ClCompile Include="src\Tetrahedron.cpp" />
     <ClCompile Include="src\TetrahedronAnalysis.cpp" />
+    <ClCompile Include="src\Tensor.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="Notes.txt" />
