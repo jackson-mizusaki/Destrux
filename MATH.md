@@ -73,6 +73,8 @@ We could also have decomposed **F** like so
 
 ![\mathbf{F} = \mathbf{V} \cdot \mathbf{R}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BF%7D%20%3D%20%5Cmathbf%7BV%7D%20%5Ccdot%20%5Cmathbf%7BR%7D)
 
+Decomposition is a tricky subject to discuss in brief, but an iterative algorithm is found at the bottom of [this page](https://www.continuummechanics.org/polardecomposition.html) 
+
 In this case, **V** is the left stretch tensor.
 
 **R** is orthogonal. Both **V** and **U** are symmetric. Notably
