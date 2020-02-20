@@ -5,3 +5,6 @@
 *.opendb
 .vs/*
 Debug/*
+Build/*
+Destrux/Debug/
+Destrux/Build/
