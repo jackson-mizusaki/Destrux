@@ -37,6 +37,7 @@ The relation between **u** and **Φ** is expressed by
 
 One can translate between spatial and material coordinates by "push-forward" and "pull-back" operations. In general, such operators are defined (perhaps confusingly) by the functions Φ for push-forward, and Φ* for pull-back. In this context, the push-forward and pull-back operators are defined by the Deformation Gradient Tensor ![\mathbf{F}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BF%7D) (in different ways, for different operands)
 
+# Deformation
 
 ## Deformation Gradient Tensor F
 The motivation for using the deformation gradient tensor lies in needing to express the changes in particles after deformation by their positions from the reference configuration. Hence, **F** will relate in some way to the changes of a particle in a spatial description and the change of a particle in a material description. The displacement function **Φ** defined above already gives a relation between the two descriptions. 
