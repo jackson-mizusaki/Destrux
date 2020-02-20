@@ -5,6 +5,15 @@ This file acts as a reference and introduction to many of the concepts used with
 
 Other sources for information on this subject can be found on [Wikipedia](https://en.wikipedia.org/wiki/Continuum_mechanics) and [continuummechanics.org/](https://www.continuummechanics.org/). 
 
+## Brief Introduction
+There are several concepts that are essential to the simulation of deformable bodies. In continuum mechanics, there are two approaches, infinitesimal strain theory and finite strain theory.
+
+Infinitesimal strain theory assumes that the displacements of the particles of a body are infinitesimally smaller than the body itself. Wikipedia notes that this is used in engineering for the stress analysis of stiff materials, where deformations should be minimized.
+
+Finite strain theory, on the other hand, covers deformations that exceed the limits of infinitesimal strain theory. Materials that are elastic and plastic behave differently to materials like concrete.
+
+
+There's also a concept of "linear" and "nonlinear" materials. This refers to the relationship between stress and strain. These concepts will be defined below, but for now, if one graphs the stress of a material as a function of its strain, it will be a straight line. Nonlinear elastic materials have more complex shapes that cannot be expressed as a linear equation.
 
 # Descriptions and Coordinates
 ## Material Description
@@ -55,7 +64,7 @@ The gradient tensor is a 3x3 matrix that looks like the following
 
 [  ∂z/∂X  ∂z/∂Y  ∂z/∂Z  ]
 
-For formatting's sake, i will use [Einstein notation](https://en.wikipedia.org/wiki/Einstein_notation). Check out (this page)[https://www.continuummechanics.org/tensornotationbasic.html] for a nice introduction.
+For formatting's sake, i will use [Einstein notation](https://en.wikipedia.org/wiki/Einstein_notation). Check out [this page](https://www.continuummechanics.org/tensornotationbasic.html) for a nice introduction.
 
 ![F_{ij} = \dfrac{\partial x_{i}}{\partial X_{j}}](https://render.githubusercontent.com/render/math?math=F_%7Bij%7D%20%3D%20%5Cdfrac%7B%5Cpartial%20x_%7Bi%7D%7D%7B%5Cpartial%20X_%7Bj%7D%7D)
 
@@ -111,18 +120,42 @@ There is a spatial description version of this tensor, known as the left Cauchy-
 ![\mathbf{B} = \mathbf{FF^{T}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BB%7D%20%3D%20%5Cmathbf%7BFF%5E%7BT%7D%7D)
 
 # Strain
-Because a body can have a rigid body displacement, i.e, every point in the body moves uniformly through space and does not change in reference to each other, the measure of deformation, strain, is a measure of how the displacement is locally different to its initial configuration. More physically, strain is a measure of a body's stretch or compression, as well as any angular stretching, or shearing.
+Because a body can have a rigid body displacement, i.e, every point in the body moves uniformly through space and does not change in reference to each other, the measure of deformation, strain, is a measure of how the displacement is locally different to its initial configuration. More physically, strain is a measure of a body's stretch or compression, as well as any angular stretching, or shearing
 
+
+## Infinitesimal strain tensor ϵ
+![\epsilon = \dfrac{1}{2}(\mathbf{F} + \mathbf{F^{T}}) - \mathbf{I}](https://render.githubusercontent.com/render/math?math=%5Cepsilon%20%3D%20%5Cdfrac%7B1%7D%7B2%7D(%5Cmathbf%7BF%7D%20%2B%20%5Cmathbf%7BF%5E%7BT%7D%7D)%20-%20%5Cmathbf%7B1%7D)
+
+Remember that **F** can be decomposed into **U** and **R**:
+
+![\epsilon = \dfrac{1}{2}(\mathbf{R}\cdot\mathbf{U} + \mathbf{U^{T}}\cdot\mathbf{R^{T}}) - \mathbf{I}](https://render.githubusercontent.com/render/math?math=%5Cepsilon%20%3D%20%5Cdfrac%7B1%7D%7B2%7D(%5Cmathbf%7BR%7D%5Ccdot%5Cmathbf%7BU%7D%20%2B%20%5Cmathbf%7BU%5E%7BT%7D%7D%5Ccdot%5Cmathbf%7BR%5E%7BT%7D%7D)%20-%20%5Cmathbf%7B1%7D)
+
+If **R** is the identity matrix, meaning there are no rotations, this simplifies to 
+
+![\epsilon = \mathbf{U} - \mathbf{I}](https://render.githubusercontent.com/render/math?math=%5Cepsilon%20%3D%20%5Cmathbf%7BU%7D%20-%20%5Cmathbf%7BI%7D)
+
+For 
+We can identifiy a weakness in inifinitesimal strain theory: rotations of a rigid body make computation difficult.
 
 ## Green-Lagrange Strain Tensor E
+The above simplified form is only useful when rotations are infinitesimally small. But **U** 
+
 The Green-Lagrange Strain Tensor **E** is defined as 
 
 ![\mathbf{E} = \dfrac{1}{2}(\mathbf{C} - \mathbf{I})](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BE%7D%20%3D%20%5Cdfrac%7B1%7D%7B2%7D(%5Cmathbf%7BC%7D%20-%20%5Cmathbf%7BI%7D))
 
-where **C** is the Cauchy-Green tensor, and **I** is the Identity tensor
+where **C** is the Cauchy-Green tensor -- ![\mathbf{FF^{T}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BFF%5E%7BT%7D%7D)-- and **I** is the Identity tensor
 
 The spatial version, the Eulerian/Almansi strain tensor is represented by **e** and is defined by
+
 ![\mathbf{e} = \dfrac{1}{2}(\mathbf{I} - \mathbf{B^{-1}}) ](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7Be%7D%20%3D%20%5Cdfrac%7B1%7D%7B2%7D(%5Cmathbf%7BI%7D%20-%20%5Cmathbf%7BB%5E%7B-1%7D%7D)%20)
+
+
+Let's take a brief pause here to note that the *infinitesimal strain tensor* ϵ is similar, but not the same as the the Green-Lagrange Strain Tensor which is used in *finite strain theory*. In infinitesimal strain theory, the terms are ![\mathbf{F} + \mathbf{F^{T}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BF%7D%20%2B%20%5Cmathbf%7BF%5E%7BT%7D%7D) whereas in finite strain theory, the terms are ![\mathbf{F^{T}} \cdot \mathbf{F}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BF%5E%7BT%7D%7D%20%5Ccdot%20%5Cmathbf%7BF%7D)
+
+The infinitesimal strain theory is beneficial in that it is a linearized version of finite strain theory, and so ϵ is a linearized version of the finite strain tensors **E** and **e**.
+
+There is a sketch of a proof on [Wikipedia](https://en.wikipedia.org/wiki/Infinitesimal_strain_theory#Infinitesimal_strain_tensor) that might prove useful in understanding how this linearization is justified.
 
 ## Some More Pull-back operators
 The left and right Cauchy-Green tensors are related by
