@@ -134,7 +134,8 @@ If **R** is the identity matrix, meaning there are no rotations, this simplifies
 
 ![\epsilon = \mathbf{U} - \mathbf{I}](https://render.githubusercontent.com/render/math?math=%5Cepsilon%20%3D%20%5Cmathbf%7BU%7D%20-%20%5Cmathbf%7BI%7D)
 
-For 
+**U** - **I** is an acceptable strain measure. Rotation affects **ϵ** which is why **ϵ** = **U** - **I** only when there is no rotation.
+
 We can identifiy a weakness in inifinitesimal strain theory: rotations of a rigid body make computation difficult.
 
 ## Green-Lagrange Strain Tensor E
