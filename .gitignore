@@ -1,5 +1,7 @@
-
+packages
 *.ipch
+DestruxApp/Debug
+DestruxApp/x64
 *.db
 .vs/Destrux/v16/.suo
 *.opendb
@@ -7,4 +9,9 @@
 Debug/*
 Build/*
 Destrux/Debug/
-Destrux/Build/
+Destrux/x64/*
+Destrux/Build/*
+DestruxText/Debug
+DestruxTest/x64
+*.idb
+*.obj

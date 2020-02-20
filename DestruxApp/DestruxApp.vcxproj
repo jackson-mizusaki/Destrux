@@ -103,7 +103,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
-      <AdditionalIncludeDirectories>D:\Jackson\Programming\vcpkg\packages\bullet3_x86-windows\include;D:\Jackson\Programming\SDL2-devel-2.0.10-VC\SDL2-2.0.10\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>D:\Jackson\Programming\vcpkg\packages\bullet3_x86-windows\include;D:\Jackson\Programming\SDL2-devel-2.0.10-VC\SDL2-2.0.10\include;C:\Users\Jackson\source\repos\Destrux\Destrux\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

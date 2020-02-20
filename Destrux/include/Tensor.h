@@ -1,5 +1,6 @@
 #pragma once
 #include <Eigen/Core>
+#include <Eigen/Dense>
 #include <tuple>
 namespace Destrux {
     enum class Handedness { Left, Right };
@@ -16,7 +17,8 @@ namespace Destrux {
         template<typename OtherDerived>
         Tensor& operator=(const Eigen::MatrixBase<OtherDerived>& other);
 
-        void PolarDecomposition(Tensor, Tensor&, Tensor&, Handedness);
+        bool TheoreticalDecomposition(Tensor&, Tensor&, Handedness);
+        bool PolarDecomposition(Tensor&, Tensor&, Handedness);
     };
 
 }
