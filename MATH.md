@@ -154,9 +154,12 @@ The spatial version, the Eulerian/Almansi strain tensor is represented by **e** 
 
 Let's take a brief pause here to note that the *infinitesimal strain tensor* ϵ is similar, but not the same as the the Green-Lagrange Strain Tensor which is used in *finite strain theory*. In infinitesimal strain theory, the terms are ![\mathbf{F} + \mathbf{F^{T}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BF%7D%20%2B%20%5Cmathbf%7BF%5E%7BT%7D%7D) whereas in finite strain theory, the terms are ![\mathbf{F^{T}} \cdot \mathbf{F}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BF%5E%7BT%7D%7D%20%5Ccdot%20%5Cmathbf%7BF%7D)
 
-The infinitesimal strain theory is beneficial in that it is a linearized version of finite strain theory, and so ϵ is a linearized version of the finite strain tensors **E** and **e**.
+The infinitesimal strain theory is beneficial in that it is a linearized version of finite strain theory (there are no quadratic terms), and so ϵ is a linearized version of the finite strain tensors **E** and **e**.
 
 There is a sketch of a proof on [Wikipedia](https://en.wikipedia.org/wiki/Infinitesimal_strain_theory#Infinitesimal_strain_tensor) that might prove useful in understanding how this linearization is justified.
+
+## Principal Strains
+
 
 ## Some More Pull-back operators
 The left and right Cauchy-Green tensors are related by
