@@ -3,6 +3,8 @@ This file acts as a reference and introduction to many of the concepts used with
 
 **Disclaimer: I do not have a formal education in continuum mechanics. The notes contained herein are my own, as i learn the principles of continuum mechanics and the finitie element method, and do not constitute a full course in such disciplines. Although i am using multiple sources to confirm my understanding of each concept, do not assume correctness of anything presented.**
 
+I will not spend much time deriving many of the formulae; further reading may be necessary.
+
 Other sources for information on this subject can be found on [Wikipedia](https://en.wikipedia.org/wiki/Continuum_mechanics) and [continuummechanics.org/](https://www.continuummechanics.org/). 
 
 ## Brief Introduction
@@ -17,14 +19,14 @@ There's also a concept of "linear" and "nonlinear" materials. This refers to the
 
 # Descriptions and Coordinates
 ## Material Description
-Material descriptions follow a particle within the body through space over time.
+Material, or Lagrangian, descriptions follow a particle within the body through space over time.
 
 Changes to a body during deformation can be expressed as a change from the body's initial state.
 
 Material coordinates are expressed by an uppercase **X** and are in relation to Cartesian bases ![\mathbf{E_{1}}, \mathbf{E_{2}}, \mathbf{E_{3}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BE_%7B1%7D%7D%2C%20%5Cmathbf%7BE_%7B2%7D%7D%2C%20%5Cmathbf%7BE_%7B3%7D%7D)
 
 ## Spatial Description
-Spatial descriptions examine a fixed point in space and describe which particles of a body are at that point over time.
+Spatial, or Eulerian, descriptions examine a fixed point in space and describe which particles of a body are at that point over time.
 
 Spatial coordinates are expressed by a lowercase x and are in relation to Cartesian bases ![\mathbf{e_{1}}, \mathbf{e_{2}}, \mathbf{e_{3}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7Be_%7B1%7D%7D%2C%20%5Cmathbf%7Be_%7B2%7D%7D%2C%20%5Cmathbf%7Be_%7B3%7D%7D) 
 
@@ -173,6 +175,39 @@ The Green-lagrange Strain and Eulerian/Almansi Strain tensors are related by
 ![\mathbf{e} = \mathbf{F^{-T}EF^{-1}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7Be%7D%20%3D%20%5Cmathbf%7BF%5E%7B-T%7DEF%5E%7B-1%7D%7D) and
 
 ![\mathbf{E} = \mathbf{F^{T}eF}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BE%7D%20%3D%20%5Cmathbf%7BF%5E%7BT%7DeF%7D)
+
+# Velocity Gradients and Rate of Deformation
+The velocity gradient *l* is defined as 
+
+![l_{ij} = \dfrac{\partial v_{i}}{\partial x_{j}}](https://render.githubusercontent.com/render/math?math=l_%7Bij%7D%20%3D%20%5Cdfrac%7B%5Cpartial%20v_%7Bi%7D%7D%7B%5Cpartial%20x_%7Bj%7D%7D)
+
+and is a measure of how the velocity differs between points within a body.
+
+It is a spatial quantity, but can be expressed in terms of material quantity **F**  
+
+![\mathbf{L} = \mathbf{\dot{F}}\cdot\mathbf{F^{-1}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7BL%7D%20%3D%20%5Cmathbf%7B%5Cdot%7BF%7D%7D%5Ccdot%5Cmathbf%7BF%5E%7B-1%7D%7D)
+
+## Rate of Deformation Tensor
+The rate of deformation tensor **d** is defined as 
+
+![\mathbf{d} = \frac{1}{2}(\mathbf{l}+\mathbf{L^{l}})](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7Bd%7D%20%3D%20%5Cfrac%7B1%7D%7B2%7D(%5Cmathbf%7Bl%7D%2B%5Cmathbf%7Bl%5E%7BT%7D%7D))
+
+and give the rate of deformation of the material. It is also the spatial version of the derivative of the strain tensor **E**.
+
+
+## Spin Tensor
+The spin tensor **w** is defined as
+
+![\mathbf{w} = \frac{1}{2}(\mathbf{l}-\mathbf{l^{T}})](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7Bw%7D%20%3D%20%5Cfrac%7B1%7D%7B2%7D(%5Cmathbf%7Bl%7D-%5Cmathbf%7Bl%5E%7BT%7D%7D))
+
+We can define **l** as **l** = **d** + **w** where **w** is an antisymmetrix matrix.
+
+It turns out, after some algebraic work, that 
+
+![\mathbf{w} = \mathbf{\dot{R}}\mathbf{R^{T}}](https://render.githubusercontent.com/render/math?math=%5Cmathbf%7Bw%7D%20%3D%20%5Cmathbf%7B%5Cdot%7BR%7D%7D%5Cmathbf%7BR%5E%7BT%7D%7D)
+
+where **R** is the rotation matrix obtained from the polar decomposition of **F**. 
+
 
 # Stress
 Stress is related in terms of Force/Area. When a force is applied in the same direction as the normal of the area, it is considered a normal stress, and represented by σ. When the force is orthogonal to the normal of the area, it is a shear stress, represented by τ
